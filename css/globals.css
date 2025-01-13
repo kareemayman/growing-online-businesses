@@ -23,6 +23,7 @@ h1,
 h2 {
   font-family: "Poppins", serif;
   font-style: normal;
+  margin: 0;
 }
 
 h3,
@@ -32,6 +33,7 @@ h6,
 a {
   font-family: "Poppins", serif;
   font-style: normal;
+  margin: 0;
 }
 
 p {
@@ -53,6 +55,7 @@ p {
 
   /* Others */
   --main-trans: 0.3s;
+  --section-padding: 60px;
 }
 /* End Variables */
 
@@ -83,11 +86,7 @@ a {
 }
 /* End Global Rules */
 
-/* Start Local Rules */
-
-/* End Local Rules */
-
-/* Start Media Queries */
+/* Start Container Media Queries */
 @media (min-width: 769px) {
   .container {
     width: 750px;
@@ -105,4 +104,10 @@ a {
     width: 1170px;
   }
 }
-/* End Media Queries */
+
+@media (min-width: 1600px) {
+    .container {
+        width: 1560px;
+    }
+}
+/* End Container Media Queries */
