@@ -69,7 +69,7 @@ header nav a:last-of-type:hover {
     position: absolute;
     right: 0;
     bottom: 50px;
-    z-index: -1;
+    z-index: -2;
 }
 
 .hero .container .card {
@@ -203,6 +203,54 @@ header nav a:last-of-type:hover {
     }
 }
 
+@media (max-width: 1199px) {
+    .hero .info h1 {
+        width: 100%;
+    }
+
+    .hero .info h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero .person img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 991px) {
+    .hero .person,
+    .hero .card {
+        display: none !important;
+    }
+
+    .hero .info {
+        flex-basis: 100%;
+    }
+
+    .hero .info h1 {
+        font-size: 2.8rem;
+        text-align: center;
+        line-height: 1.1;
+    }
+
+    .landing-blob {
+        left: -32vw;
+    }
+
+    .hero form {
+        margin-bottom: 100px;
+    }
+
+    .hero form input {
+        width: 100%;
+        box-shadow: 0 0 15px 4px rgba(49, 49, 49, 0.4);
+    }
+
+    .hero form button {
+        right: 10px;
+    }
+}
+
 @media (max-width: 768px) {
     .desktop {
         display: none;
@@ -211,5 +259,11 @@ header nav a:last-of-type:hover {
     .landing-blob {
         top: -70px;
         left: -90px;
+    }
+}
+
+@media (max-width: 370px) {
+    .landing-blob {
+        left: -120px;
     }
 }
