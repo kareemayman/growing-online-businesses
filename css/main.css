@@ -196,6 +196,35 @@ header nav a:last-of-type:hover {
 }
 /* End Hero Section */
 
+/* Start Companies Section */
+.companies .container {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.companies p {
+    color: var(--gray-text);
+}
+
+.companies .logos {
+    display: flex;
+    align-content: center;
+    gap: 30px;
+}
+
+.companies .comp {
+    width: 80px;
+    display: flex;
+}
+
+.companies .comp img {
+    max-width: 100%;
+}
+/* End Companies Section */
+
 /* Start Media Queries */
 @media (min-width: 769px) {
     .mobile {
@@ -234,7 +263,7 @@ header nav a:last-of-type:hover {
     }
 
     .landing-blob {
-        left: -32vw;
+        left: -33vw;
     }
 
     .hero form {
@@ -259,6 +288,21 @@ header nav a:last-of-type:hover {
     .landing-blob {
         top: -70px;
         left: -90px;
+    }
+
+    .companies .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .companies .logos {
+        flex-direction: column;
+    }
+
+    .companies .logos .comp {
+        flex-direction: column;
+        align-items: stretch;
     }
 }
 
