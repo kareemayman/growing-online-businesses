@@ -49,10 +49,11 @@ p {
   /* Start Colors */
   --dark-purple: #714bec;
   --light-purple: #ac61f6;
-  --yellow: #eddba9;
+  --yolk: #eddba9;
   --gray-background: #f6f6f6;
   --gray-text: #9398a3;
   --light-gray-text: #c0c0c0;
+  --yellow: #fbe22e;
 
   /* Others */
   --main-trans: 0.3s;

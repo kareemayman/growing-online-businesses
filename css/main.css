@@ -72,6 +72,62 @@ header nav a:last-of-type:hover {
     z-index: -1;
 }
 
+.hero .container .card {
+    position: absolute;
+    left: 10px;
+    bottom: 150px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 1px rgba(99, 99, 99, 0.288);
+    padding: 40px 60px 30px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero .card .picture {
+    border-radius: 50%;
+    background-color: var(--yellow);
+    border: 20px solid #fff2f0;
+    width: 140px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero .card .picture img {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.hero .card .picture::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    border-right-color: var(--dark-purple);
+    border-top-color: rgb(191, 41, 196);
+    rotate: 45deg; 
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+
+.hero .card h2 {
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.hero .card p {
+    color: var(--gray-text);
+}
+
 .hero .person {
     flex-basis: 50%;
 }
