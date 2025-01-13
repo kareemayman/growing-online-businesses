@@ -141,10 +141,8 @@ header nav a:last-of-type:hover {
     flex-basis: 50%;
 }
 
-.hero .info h1 {
+.hero .info .main-section-header {
     width: 80%;
-    font-size: 4rem;
-    line-height: 1.4;
     margin-bottom: 50px;
 }
 
@@ -212,7 +210,7 @@ header nav a:last-of-type:hover {
 .companies .logos {
     display: flex;
     align-content: center;
-    gap: 30px;
+    gap: 60px;
 }
 
 .companies .comp {
@@ -225,6 +223,140 @@ header nav a:last-of-type:hover {
 }
 /* End Companies Section */
 
+/* Start Products Section */
+.sell-products {
+    padding-top: calc(var(--section-padding) + 60px);
+    padding-bottom: calc(var(--section-padding) + 60px);
+}
+
+.sell-products .container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.sell-products .info {
+    flex-basis: 23%;
+}
+
+.sell-products .info h2 {
+    color: var(--yellow);
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.sell-products .info h1 {
+    line-height: 1.2;
+}
+
+.sell-products .info p {
+    margin-top: 20px;
+    margin-bottom: 60px;
+    line-height: 1.6;
+}
+
+.sell-products .products {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+}
+
+.sell-products .products .prod-card {
+    background-color: white;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 1px rgba(99, 99, 99, 0.288);
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    z-index: 2;
+}
+
+.sell-products .prod-img {
+    margin-inline: auto;
+    translate: 0 -50%;
+    width: 100%;
+}
+
+.sell-products .prod-img img {
+    max-width: 100%;
+}
+
+.sell-products .prod-info {
+    translate: 0 -80px;
+}
+
+.sell-products .prod-info > p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sell-products .prod-info > span {
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin: 20px 0;
+    background-color: var(--gray-background);
+}
+
+.sell-products .prod-info .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sell-products .prod-info .flex p {
+    color: var(--yellow);
+    font-weight: 900;
+}
+
+.sell-products .prod-info p span {
+    font-weight: normal;
+}
+
+.sell-products .prod-info .flex i {
+    transition: var(--main-trans);
+    cursor: pointer;
+}
+
+.sell-products .prod-info .flex i:hover {
+    color: var(--yellow);
+}
+
+.sell-products .prod-card:not(:last-of-type) {
+    translate: 0 -35%;
+}
+
+.sell-products .prod-card:last-of-type {
+    translate: 0 35%;
+}
+
+.sell-products .products::before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--yolk);
+    width: 250px;
+    aspect-ratio: 1;
+    top: -85%;
+    right: 220px;
+}
+
+.sell-products .products::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: #ab9efb;
+    width: 220px;
+    aspect-ratio: 1;
+    top: -5%;
+    right: -40px;
+}
+/* End Products Section */
+
 /* Start Media Queries */
 @media (min-width: 769px) {
     .mobile {
@@ -233,12 +365,12 @@ header nav a:last-of-type:hover {
 }
 
 @media (max-width: 1199px) {
-    .hero .info h1 {
-        width: 100%;
+    .main-section-header {
+        font-size: 3.5rem;
     }
 
-    .hero .info h1 {
-        font-size: 3.5rem;
+    .hero .info .main-section-header {
+        width: 100%;
     }
 
     .hero .person img {
@@ -256,7 +388,7 @@ header nav a:last-of-type:hover {
         flex-basis: 100%;
     }
 
-    .hero .info h1 {
+    .main-section-header {
         font-size: 2.8rem;
         text-align: center;
         line-height: 1.1;
@@ -278,6 +410,43 @@ header nav a:last-of-type:hover {
     .hero form button {
         right: 10px;
     }
+
+    .sell-products {
+        padding-top: var(--section-padding);
+        padding-bottom: var(--section-padding);
+    }
+
+    .sell-products .container {
+        flex-direction: column;
+        gap: 100px;
+    }
+
+    .sell-products .info {
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .sell-products .products {
+        flex-direction: column;
+        gap: 120px;
+    }
+
+    .sell-products .products .prod-card {
+        translate: initial;
+    }
+
+    .sell-products .products::after {
+        top: 46%;
+        right: -12px;
+    }
+
+    .sell-products .products::before {
+        top: -13%;
+        right: -12%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -298,6 +467,7 @@ header nav a:last-of-type:hover {
 
     .companies .logos {
         flex-direction: column;
+        gap: 30px;
     }
 
     .companies .logos .comp {

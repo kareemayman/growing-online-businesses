@@ -49,8 +49,8 @@ p {
   /* Start Colors */
   --dark-purple: #714bec;
   --light-purple: #ac61f6;
-  --yolk: #eddba9;
-  --gray-background: #f6f6f6;
+  --yolk: #f9dc88;
+  --gray-background: #e4e4e4;
   --gray-text: #9398a3;
   --light-gray-text: #c0c0c0;
   --yellow: #fbe22e;
@@ -85,6 +85,67 @@ a {
 .container {
   margin-inline: auto;
   padding-inline: 15px;
+}
+
+.main-section-header {
+  font-size: 4rem;
+  line-height: 1.4;
+}
+
+.more-details {
+  width: 250px;
+  padding: 15px 30px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-image: linear-gradient(to right, var(--light-purple), var(--dark-purple));
+  position: relative;
+  overflow: hidden;
+}
+
+.more-details::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  background-image: linear-gradient(to left, var(--light-purple), var(--dark-purple));
+  transition: var(--main-trans);
+}
+
+.more-details:hover::before {
+  right: 0;
+}
+
+.more-details:hover span {
+  transition: var(--main-trans);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+  color: black;
+}
+
+.more-details span {
+  translate: -20px;
+}
+
+.more-details i {
+  position: absolute;
+  color: var(--dark-purple);
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  right: 4px;
+  top: 50%;
+  translate: 0 -50%;
+  height: 40px;
+  aspect-ratio: 1;
+  font-size: 1.2rem;
 }
 /* End Global Rules */
 
