@@ -653,9 +653,9 @@ footer h3 {
     width: calc(100vw - 30px);
     height: calc(100dvh - 120px);
     box-shadow: 0 0 15px 4px rgba(49, 49, 49, 0.4);
-    border-radius: 10px;
+    border-radius: 15px;
     z-index: 1;
-    padding: 30px;
+    padding: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
