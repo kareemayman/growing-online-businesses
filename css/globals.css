@@ -87,6 +87,28 @@ a {
   padding-inline: 15px;
 }
 
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(223, 223, 223);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--yolk);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #d6bd70;
+}
+
+::selection {
+  background-color: var(--yolk);
+  color: black;
+}
+
 .main-section-header {
   font-size: 4rem;
   line-height: 1.4;
