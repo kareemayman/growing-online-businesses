@@ -535,6 +535,96 @@ header nav a:last-of-type:hover {
 }
 /* End Increase Sales Section */
 
+/* Start Write Us Section */
+.write-us {
+    padding-top: var(--section-padding);
+    /* padding-bottom: var(--section-padding); */
+    position: relative;
+    overflow: hidden;    
+}
+
+.write-us-blob {
+    position: absolute;
+    right: -10%;
+    top: 0;
+    z-index: -1;
+}
+
+.write-us .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.write-us .container form {
+    background-color: white;
+    box-shadow: 0 2px 12px 6px rgba(192, 192, 192, 0.411);
+    padding: 60px;
+    text-align: center;
+    border-radius: 10px;
+    transition: var(--main-trans);
+}
+
+.write-us .container form:focus-within {
+    box-shadow: 0 0 10px 3px hsla(254, 81%, 61%, 0.274);
+}
+
+.write-us form h1 {
+    margin-bottom: 60px;
+}
+
+.write-us form input,
+.write-us form textarea {
+    border-radius: 30px;
+    background-color: #f6f6f6;
+    padding: 20px 30px;
+    border: none;
+    outline: 0;
+    width: 100%;
+    transition: var(--main-trans);
+}
+
+.write-us form input:focus,
+.write-us form textarea:focus {
+    box-shadow: 0 0 10px 3px hsla(254, 81%, 61%, 0.384);
+}
+
+.write-us form textarea {
+    height: 180px;
+    margin: 20px auto 40px;
+    resize: none;
+}
+
+.write-us button {
+    border-radius: 50px;
+    background-image: linear-gradient(to right, var(--light-purple), var(--dark-purple));
+    color: white;
+    border: none;
+    outline: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 60px;
+    margin-inline: auto;
+    letter-spacing: 1px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: var(--main-trans);
+}
+
+.write-us button:hover {
+    box-shadow: 0 0 15px 4px hsla(254, 81%, 61%, 0.384);
+}
+
+.write-us .picture {
+    max-width: 50%;
+}
+
+.write-us .picture img {
+    max-width: 100%;
+}
+/* End Write Us Section */
+
 /* Start Media Queries */
 @media (min-width: 769px) {
     .mobile {
@@ -553,6 +643,10 @@ header nav a:last-of-type:hover {
 
     .increase-sales .container {
         justify-content: space-evenly;
+    }
+
+    .write-us-blob {
+        right: -40%
     }
 }
 
@@ -575,6 +669,10 @@ header nav a:last-of-type:hover {
 
     .increase-sales .container .stats {
         flex-basis: 60%;
+    }
+
+    .write-us-blob {
+        right: -65%
     }
 }
 
@@ -677,6 +775,15 @@ header nav a:last-of-type:hover {
     .increase-sales .stats::after {
         right: 0;
     }
+
+    .write-us .container {
+        justify-content: center;
+        padding-bottom: var(--section-padding);
+    }
+
+    .write-us .container .picture {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
@@ -709,6 +816,14 @@ header nav a:last-of-type:hover {
         top: 0;
         left: -22%;
         width: initial;
+    }
+
+    .write-us-blob {
+        right: -50%;
+    }
+
+    .write-us .container form {
+        padding: 50px 30px;
     }
 }
 
