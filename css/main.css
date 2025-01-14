@@ -625,6 +625,24 @@ header nav a:last-of-type:hover {
 }
 /* End Write Us Section */
 
+/* Start Footer */
+footer {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    /* background-image: linear-gradient(to right, var(--light-purple), var(--dark-purple)); */
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer h3 {
+    color: white;
+    font-weight: 100;
+    font-size: 1rem;
+}
+/* End Footer */
+
 /* Start Media Queries */
 @media (min-width: 769px) {
     .mobile {
