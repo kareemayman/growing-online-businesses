@@ -85,7 +85,7 @@ header nav a:last-of-type:hover {
     align-items: center;
 }
 
-.hero .card .picture {
+.special-picture {
     border-radius: 50%;
     background-color: var(--yellow);
     border: 20px solid #fff2f0;
@@ -97,14 +97,14 @@ header nav a:last-of-type:hover {
     position: relative;
 }
 
-.hero .card .picture img {
+.special-picture img {
     width: 100%;
     aspect-ratio: 1;
     border-radius: 50%;
     overflow: hidden;
 }
 
-.hero .card .picture::after {
+.special-picture::after {
     content: "";
     position: absolute;
     width: 120px;
@@ -236,21 +236,21 @@ header nav a:last-of-type:hover {
     align-items: center;
 }
 
-.sell-products .info {
+.special-article {
     flex-basis: 23%;
 }
 
-.sell-products .info h2 {
+.special-article h2 {
     color: var(--yellow);
     margin-bottom: 30px;
     font-weight: 300;
 }
 
-.sell-products .info h1 {
+.special-article h1 {
     line-height: 1.2;
 }
 
-.sell-products .info p {
+.special-article p {
     margin-top: 20px;
     margin-bottom: 60px;
     line-height: 1.6;
@@ -388,7 +388,7 @@ header nav a:last-of-type:hover {
 
 .businesses .container {
     padding-top: var(--section-padding);
-    padding-bottom: var(--section-padding);
+    padding-bottom: calc(60px + var(--section-padding));
     display: grid;
     gap: 30px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -435,10 +435,124 @@ header nav a:last-of-type:hover {
 }
 /* End Businesses Section */
 
+/* Start Increase Sales Section */
+.increase-sales {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.increase-sales .container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.increase-sales .special-article {
+    flex-basis: 30%;
+}
+
+.increase-sales .special-article p {
+    width: 80%;
+}
+
+.increase-sales .container .stats {
+    flex-basis: 50%;
+}
+
+.increase-sales .stats {
+    position: relative;
+}
+
+.increase-sales .stats .card {
+    border-radius: 15px;
+    background-color: white;
+    padding: 30px 40px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 12px 6px rgba(201, 201, 201, 0.3);
+    gap: 30px;
+    width: 70%;
+}
+
+.increase-sales .stats::before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background-color: #4bb5d8;
+    width: 38%;
+    aspect-ratio: 1;
+    z-index: -1;
+    top: -12%;
+    left: -15%;
+}
+
+.increase-sales .stats::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background-color: #54c883;
+    width: 32%;
+    aspect-ratio: 1;
+    z-index: -1;
+    bottom: -10%;
+    right: 17%;
+}
+
+.increase-sales .special-picture {
+    margin: 0;
+}
+
+.increase-sales .stats .card:first-of-type {
+    justify-content: flex-start;
+    margin-bottom: 100px;
+    translate: -6% 0;
+}
+
+.increase-sales .stats .card:last-of-type {
+    justify-content: flex-end;
+    translate: 6% 0;
+}
+
+.increase-sales .card .info h1 {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.increase-sales .info h1 i {
+    color: var(--dark-purple);
+    font-size: 1.3rem;
+}
+
+.increase-sales .info p {
+    font-weight: 500;
+}
+
+.increase-sales .info p span {
+    color: #61d491;
+    font-weight: 900;
+}
+/* End Increase Sales Section */
+
 /* Start Media Queries */
 @media (min-width: 769px) {
     .mobile {
         display: none;
+    }
+}
+
+@media (max-width: 1600px) {
+    .increase-sales {
+        padding-top: 0;
+    }
+
+    .businesses {
+        padding-bottom: 0;
+    }
+
+    .increase-sales .container {
+        justify-content: space-evenly;
     }
 }
 
@@ -447,7 +561,7 @@ header nav a:last-of-type:hover {
         font-size: 3.5rem;
     }
 
-    .hero .info .main-section-header {
+    .special-article .main-section-header {
         width: 100%;
     }
 
@@ -458,6 +572,10 @@ header nav a:last-of-type:hover {
     .businesses .businesses-blob {
         top: 0;
     }
+
+    .increase-sales .container .stats {
+        flex-basis: 60%;
+    }
 }
 
 @media (max-width: 991px) {
@@ -466,8 +584,12 @@ header nav a:last-of-type:hover {
         display: none !important;
     }
 
-    .hero .info {
+    .special-article, .hero .info {
         flex-basis: 100%;
+    }
+
+    .hero .info .main-section-header {
+        width: 100%;
     }
 
     .main-section-header {
@@ -503,7 +625,7 @@ header nav a:last-of-type:hover {
         gap: 100px;
     }
 
-    .sell-products .info {
+    .special-article {
         flex-basis: 50%;
         display: flex;
         flex-direction: column;
@@ -528,6 +650,32 @@ header nav a:last-of-type:hover {
     .sell-products .products::before {
         top: -13%;
         right: -12%;
+    }
+
+    .increase-sales .container {
+        flex-direction: column;
+        gap: 120px;
+    }
+
+    .increase-sales .special-article {
+        order: -1;
+    }
+
+    .increase-sales .stats .card {
+        translate: 0 !important;
+        width: 100%;
+    }
+
+    .increase-sales .stats .card:first-of-type {
+        margin-bottom: 30px;
+    }
+
+    .increase-sales .stats::before {
+        left: 0;
+    }
+
+    .increase-sales .stats::after {
+        right: 0;
     }
 }
 
@@ -561,6 +709,30 @@ header nav a:last-of-type:hover {
         top: 0;
         left: -22%;
         width: initial;
+    }
+}
+
+@media (max-width: 425px) {
+    .increase-sales .container .card {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .increase-sales .card .info h1 {
+        justify-content: center;
+    }
+
+    .increase-sales .stats::before {
+        left: -5%;
+        top: 0;
+        translate: 0 -50%;
+    }
+
+    .increase-sales .stats::after {
+        right: -5%;
+        bottom: 0;
+        translate: 0 50%;
     }
 }
 
